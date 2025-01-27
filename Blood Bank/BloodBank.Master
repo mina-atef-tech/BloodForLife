@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BloodBank.master.cs" Inherits="Blood_For_Life.Blood_Bank.BloodBank" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+                <%--CSS--%>
+        <link href="..\bootstrap\css\bootstrap.css" rel="stylesheet" />
+        <link href="..\bootstrap\css\bootstrap.min.css" rel="stylesheet" />  
+            <%--CSS--%>
+<%--        <link href="Bootstrap\css\bootstrap.css" rel="stylesheet" />
+        <link href="Bootstrap\css\bootstrap.min.css" rel="stylesheet" />   
+        <link href="bootstrap\css\Login.css" rel="stylesheet" />--%>
+        <%-------------------%>
+        <link rel="icon" href='./Images/bb_logo(white).png' type="image/png">
+        <link rel="stylesheet" href='index.css'>
+        <link rel="stylesheet" href='https://fontawesome.com/v4.7.0/icon/bars'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+         <%--javascript--%>
+        <script src="Blood For Life\Bootstrap\js\bootstrap.min.js"> </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
