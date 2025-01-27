@@ -1,0 +1,232 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BloodForLife.Master.cs" Inherits="Blood_For_Life.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BLOOD for life</title>
+        <%--CSS--%>
+        <link href="Bootstrap\css\bootstrap.css" rel="stylesheet" />
+        <link href="Bootstrap\css\bootstrap.min.css" rel="stylesheet" />   
+        <link href="bootstrap\css\Login.css" rel="stylesheet" />
+        <%-------------------%>
+        <link rel="icon" href='./Images/bb_logo(white).png' type="image/png">
+        <link rel="stylesheet" href='index.css'>
+        <link rel="stylesheet" href='https://fontawesome.com/v4.7.0/icon/bars'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+         <%--javascript--%>
+        <script src="Blood For Life\Bootstrap\js\bootstrap.min.js"> </script>
+         <%----------------%>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+           <!--Spinner-->
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+
+       <%-- <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">   
+        <a class="navbar-brand" href="#">
+            <img src="imgs/books.png" height="30" width="30" />
+         E-Library
+
+        </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="homepage.aspx">Home</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">About Us</a>
+                      </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="#">Terms </a>
+                      </li>
+                 </ul>
+
+              <ul class="navbar-nav">
+                  <li class="nav-item active">  
+                      <asp:LinkButton class="nav-link" ID= "LinkButton1" runat="server"  >View Books</asp:LinkButton>
+                  </li>
+                  <li class="nav-item active">  
+                      <asp:LinkButton class="nav-link" ID= "LinkButton2" runat="server"  >User Login</asp:LinkButton>
+                  </li>
+                  <li class="nav-item active">  
+                      <asp:LinkButton class="nav-link" ID= "LinkButton3" runat="server"  >Sign Up</asp:LinkButton>
+                  </li>
+                  <li class="nav-item active">  
+                      <asp:LinkButton class="nav-link" ID= "LinkButton4" runat="server" Visible="false" >Log Out</asp:LinkButton>
+                  </li>
+                  <li class="nav-item active">  
+                      <asp:LinkButton class="nav-link" Visible="false" ID= "LinkButton5" runat="server" >Hello User</asp:LinkButton>
+                  </li>
+              </ul>
+          </div>
+        
+    </nav>
+</div>--%>
+
+
+
+<section>
+                <%--navbar--%>
+            <div id="logo"> 
+                <a href="indexmain.html"></a><img src="Images\logo.png"/>
+           </div>
+
+
+            <div id="nav">
+        <div class="header-list" id="headerl">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="false" ID= "LogOut" runat="server" OnClick="LogOut_Click"  >تسجيل الخروج </asp:LinkButton>
+                </li>
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="false" ID= "Hello" runat="server"  >مرحبا </asp:LinkButton>
+                </li>
+<%--                <li><a class="scroll" href="#about-us">من نحن</a></li>
+                <li><a href="help.html" target="_blank">تواصل معنا</a></li>
+                <li><a class="scroll" href="#vol-sect">مساعدة </a></li>--%>
+                         
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="true" ID= "Who" runat="server"  >من نحن </asp:LinkButton>
+                </li> 
+                 <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="true" ID= "Contact" runat="server"  >تواصل معنا </asp:LinkButton>
+                </li> 
+
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="true" ID= "help" runat="server"  >مساعدة </asp:LinkButton>
+                </li> 
+               
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="true" ID= "SignUp" runat="server" OnClick="SignUp_Click"  >سجل </asp:LinkButton>
+                </li> 
+                <li class="nav-item active">  
+                <asp:LinkButton class="nav-link" Visible="true" ID= "MainPage" runat="server" onclick="MainPage_Click" >الرئيسية </asp:LinkButton>
+                </li>            
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </div>
+        <%-- end of navbar--%>
+</section>
+
+            <br />
+    <br />
+    <br />
+        <br />
+
+                <div>   
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+            </asp:ContentPlaceHolder>
+               </div>
+
+
+
+
+        <%--footer--%>
+        <footer>
+    <div class="siteFooterBar ">
+        <div class="content1">
+            <div class="foot">2021 © All rights reserved.</div>
+        </div>
+    </div>
+    <h3> تواصل معنا عبر الوسائل الاتية </h3>
+
+    <div class="footer-content">
+
+        <div class="phone">أرقمنا <br>
+            01026749293
+            01026749293
+        </div>
+        <div class="email"> البريد الالكترونى<br>
+            deyaasalem@gmail.com
+            deyaasalem@gmail.com
+        </div>
+        <div class="socials">
+            <ul class="sci">
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</footer>
+
+        <!--Javascript for pre-loader-->
+
+<%--<script>
+    const preloader = document.querySelector('.preloader');
+    const fadeEffect = setInterval(() => {
+        if (!preloader.style.opacity) {
+            preloader.style.opacity = 1;
+        }
+        if (preloader.style.opacity > 0) {
+            preloader.style.opacity -= 1.5;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 1500);
+    window.addEventListener('load', fadeEffect);
+</script>
+<!--js for scroll to top-->
+<script src="up.js"></script>
+
+<!--JAVASCRIPT FOR TOGGLE MENU -->
+<script>
+    var headerl = document.getElementById("headerl");
+
+    function showMenu() {
+        headerl.style.right = "0";
+    }
+
+    function hideMenu() {
+        headerl.style.right = "-210px";
+    }
+</script>
+
+
+<!--js for scroll effects-->
+<script src="scroll.js"></script>
+
+<!--js for counter-->
+
+<script>
+    function incrementCounters() {
+        document.getElementById('counter1').innerText = parseInt(document.getElementById('counter1').innerText) + 2;
+        document.getElementById('counter2').innerText = parseInt(document.getElementById('counter2').innerText) + 1;
+        document.getElementById('counter3').innerText = parseInt(document.getElementById('counter3').innerText) + 2;
+    }
+
+    // Start automatic incrementing every second
+    setInterval(incrementCounters, 1000);
+</script>--%>
+
+
+
+
+    </form>
+
+
+</body>
+</html>
